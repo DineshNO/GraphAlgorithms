@@ -15,16 +15,16 @@ public class TreeNode {
 	
 	private void setLeftChild(TreeNode left) {
 		this.left = left;
-//		if (left != null) {
-//			left.parent = this;
-//		}
+		if (left != null) {
+			left.parent = this;
+		}
 	}
 	
 	private void setRightChild(TreeNode right) {
 		this.right = right;
-//		if (right != null) {
-//			right.parent = this;
-//		}
+		if (right != null) {
+			right.parent = this;
+		}
 	}
 	
 	public void insertInOrder(int d) {
