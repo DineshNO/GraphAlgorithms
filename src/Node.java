@@ -11,6 +11,12 @@ public class Node {
 
     private Integer distance = Integer.MAX_VALUE;
 
+    private State state = State.Unvisited;
+
+    enum State { Unvisited, Visited, Visiting; }
+
+    Map<Node, Integer> adjacentNodes = new HashMap<>();
+
     public State getState() {
         return state;
     }
@@ -18,12 +24,6 @@ public class Node {
     public void setState(State state) {
         this.state = state;
     }
-
-    private State state = State.Unvisited;
-
-    enum State { Unvisited, Visited, Visiting; }
-
-    Map<Node, Integer> adjacentNodes = new HashMap<>();
 
     public String getName() {
         return name;
