@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /* One node of a binary tree. The data element stored is a single
  * character.
  */
@@ -7,6 +9,20 @@ public class TreeNode {
 	public TreeNode right; 
 	public TreeNode parent;
 	private int size = 0;
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		TreeNode treeNode = (TreeNode) o;
+		return data == treeNode.data;
+	}
+
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(data);
+	}
 
 	public TreeNode(int d) {
 		data = d;
